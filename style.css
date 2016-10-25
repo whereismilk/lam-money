@@ -1,0 +1,77 @@
+@keyframes rotate {
+  0% {
+    transform: scale(0.8);
+    filter: saturate(0) blur(2px);
+  }
+  50% {
+    transform: scale(1);
+    filter: saturate(20);
+  }
+  100% {
+    transform: scale(0.8);
+    filter: saturate(0) blur(2px);
+  }
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Futura, sans-serif;
+  font-weight: 100;
+  font-size:20px;
+}
+h3 {
+  font-weight: 400;
+}
+p {
+  margin: 0;
+  margin-bottom: 5px;
+}
+input {
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 5px 20px 5px 5px;
+  font-size: 20px;
+}
+.image {
+  width: 140px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url('./cash.jpg');
+  animation-name: rotate;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.input-wrap {
+  margin-top: 100px;
+  width: 500px;
+  height: 200px;
+}
+.item {
+  margin: 5px;
+  width: 80%;
+  height: 80px;
+}
+.output-wrap {
+  width: 500px;
+  height: 150px;
+}
+.flex_col {
+  display: flex;
+  flex-direction: column;
+}
+.flex_center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#cash {
+  color: red;
+  font-size: 50px;
+}
